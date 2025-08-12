@@ -84,32 +84,3 @@ INSERT INTO products (productName, buyPrice, quantityInStock) VALUES
 ('GigaWidget', 45.25, 10),
 ('NanoWidget', 8.50, 75)
 ON DUPLICATE KEY UPDATE buyPrice=VALUES(buyPrice), quantityInStock=VALUES(quantityInStock);
-
-
--- === Your 5 Query Answers ===
-
--- Question 1: Retrieve checkNumber, paymentDate, amount from payments
-SELECT checkNumber, paymentDate, amount
-FROM payments;
-
--- Question 2: Retrieve orderDate, requiredDate, status of orders 'In Process', ordered by orderDate DESC
-SELECT orderDate, requiredDate, status
-FROM orders
-WHERE status = 'In Process'
-ORDER BY orderDate DESC;
-
--- Question 3: Display firstName, lastName, email of employees where jobTitle = 'Sales Rep', ordered by employeeNumber DESC
-SELECT firstName, lastName, email
-FROM employees
-WHERE jobTitle = 'Sales Rep'
-ORDER BY employeeNumber DESC;
-
--- Question 4: Retrieve all columns and records from offices
-SELECT *
-FROM offices;
-
--- Question 5: Fetch productName and quantityInStock from products, ordered by buyPrice ASC, limit 5
-SELECT productName, quantityInStock
-FROM products
-ORDER BY buyPrice ASC
-LIMIT 5;
