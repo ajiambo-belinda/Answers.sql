@@ -1,5 +1,3 @@
--- 1. Create the database if not exists and use it
-CREATE DATABASE IF NOT EXISTS salesDB;
 USE salesDB;
 
 -- 2. Create 'payments' table and insert sample data
